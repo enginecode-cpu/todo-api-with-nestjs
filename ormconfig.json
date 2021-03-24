@@ -1,0 +1,11 @@
+{
+    "type": "mariadb",
+    "host": "localhost",
+    "port": 3306,
+    "username": "DB_USERNAME",
+    "password": "DB_PASSWORD",
+    "database": "todo",
+    "entities": ["dist/**/*.entity{.ts,.js}"],
+    "logging": true,
+    "synchronize": true
+}
