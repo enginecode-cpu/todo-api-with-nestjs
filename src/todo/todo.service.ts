@@ -12,16 +12,16 @@ export class TodoService {
     private todoRepository: Repository<Todo>,
   ) {}
 
-  async createTodo(todo: CreateTodoDto) {
-    await this.todoRepository.save(todo);
-  }
-
   findAll(): Promise<Todo[]> {
     return this.todoRepository.find();
   }
 
   findOne(id: number): Promise<Todo> {
     return this.todoRepository.findOne(id);
+  }
+
+  async createTodo(todo: CreateTodoDto) {
+    await this.todoRepository.save(todo);
   }
 
   async update(id: number, todo: UpdateTodoDto) {
